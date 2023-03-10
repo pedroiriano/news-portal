@@ -21,7 +21,7 @@
 {{-- END::Favicons --}}
 
 {{-- BEGIN::Vite --}}
-@vite(['resources/css/app.css', 'resources/js/app.js'])
+{{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
 {{-- END::Vite --}}
 
 {{-- BEGIN::Google Font --}}
