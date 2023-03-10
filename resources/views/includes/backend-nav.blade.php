@@ -5,22 +5,15 @@
                 <div class="Typeahead Typeahead--twitterUsers">
                     <div class="u-posRelative">
                         <input class="demo-input Typeahead-input form-control-plaintext w-100" type="text" placeholder="Search Cuba .." name="q" title="" autofocus>
-                        <div class="spinner-border Typeahead-spinner" role="status">
-                            <span class="sr-only">Loading...</span>
-                        </div>
-                        <i class="close-search" data-feather="x"></i>
+                        <div class="spinner-border Typeahead-spinner" role="status"><span class="sr-only">Loading...</span></div><i class="close-search" data-feather="x"></i>
                     </div>
                     <div class="Typeahead-menu"></div>
                 </div>
             </div>
         </form>
         <div class="header-logo-wrapper col-auto p-0">
-            <div class="logo-wrapper">
-                <a href="index.html"><img class="img-fluid" src="../assets/images/logo/logo.png" alt=""></a>
-            </div>
-            <div class="toggle-sidebar">
-                <i class="status_toggle middle sidebar-toggle" data-feather="align-center"></i>
-            </div>
+            <div class="logo-wrapper"><a href="index.html"><img class="img-fluid" src="{{ asset('backend/assets/images/logo/logo.png') }}" alt=""></a></div>
+            <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="align-center"></i></div>
         </div>
         <div class="left-header col horizontal-wrapper ps-0">
             <ul class="horizontal-menu">
