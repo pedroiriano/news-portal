@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    @include('includes.backend-meta')
+    @include('admin.includes.meta')
     @stack('css')
 </head>
 <body>
@@ -17,9 +17,9 @@
     </div>
     <div class="tap-top"><i data-feather="chevrons-up"></i></div>
     <div class="page-wrapper compact-wrapper" id="pageWrapper">
-        @include('includes.backend-nav')
+        @include('admin.includes.nav')
         @yield('content')
-        @include('includes.backend-js')
+        @include('admin.includes.js')
         @stack('js')
     </div>
 </body>

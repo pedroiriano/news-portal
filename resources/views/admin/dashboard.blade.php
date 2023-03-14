@@ -1,4 +1,4 @@
-@extends('layouts.backend')
+@extends('admin.layouts.backend')
 
 @section('content')
 <div class="page-body-wrapper horizontal-menu">
@@ -7,8 +7,8 @@
         <div>
             <div class="logo-wrapper">
                 <a href="index.html">
-                    <img class="img-fluid for-light" src="{{ asset('backend/assets/images/logo/logo.png') }}" alt="">
-                    <img class="img-fluid for-dark" src="{{ asset('backend/assets/images/logo/logo_dark.png') }}" alt="">
+                    <img class="img-fluid for-light" src="{{ asset('backend/assets/images/logo/prokopim-dark.png') }}" alt="">
+                    <img class="img-fluid for-dark" src="{{ asset('backend/assets/images/logo/prokopim-light.png') }}" alt="">
                 </a>
                 <div class="back-btn">
                     <i class="fa fa-angle-left"></i>
@@ -198,6 +198,6 @@
     </div>
     {{-- END::Page Body --}}
 
-    @include('includes.backend-footer')
+    @include('admin.includes.footer')
 </div>
 @endsection
