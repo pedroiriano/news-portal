@@ -47,6 +47,7 @@
 {{-- END::Feather Icon --}}
 
 {{-- BEGIN::Plugins CSS --}}
+<link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/css/vendors/sweetalert2.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/css/vendors/scrollbar.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/css/vendors/prism.css') }}">
 {{-- END::Plugins CSS --}}

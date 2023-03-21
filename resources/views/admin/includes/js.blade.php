@@ -21,6 +21,7 @@
 {{-- BEGIN::Sidebar Jquery --}}
 
 {{-- BEGIN::Plugins JS --}}
+<script src="{{ asset('backend/assets/js/sweet-alert/sweetalert.min.js') }}"></script>
 <script src="{{ asset('backend/assets/js/sidebar-menu.js') }}"></script>
 <script src="{{ asset('backend/assets/js/prism/prism.min.js') }}"></script>
 <script src="{{ asset('backend/assets/js/clipboard/clipboard.min.js') }}"></script>
