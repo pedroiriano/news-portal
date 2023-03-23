@@ -9,7 +9,8 @@ class AdminController extends Controller
 {
     public function AdminDashboard()
     {
-        return view('admin.dashboard');
+        $pageTitle = "Dashboard | Prokopim";
+        return view('admin.dashboard', compact('pageTitle'));
     }
 
     public function AdminLogout(Request $request)
@@ -22,6 +23,7 @@ class AdminController extends Controller
 
     public function AdminLogin()
     {
-        return view('admin.admin-login');
+        $pageTitle = "Login | Prokopim";
+        return view('admin.admin-login', compact('pageTitle'));
     }
 }

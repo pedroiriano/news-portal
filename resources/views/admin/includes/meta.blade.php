@@ -12,7 +12,7 @@
 {{-- END::CSRF Token --}}
 
 {{-- BEGIN::Title --}}
-<title>Prokopim</title>
+<title>{{ $pageTitle }}</title>
 {{-- END::Title --}}
 
 {{-- BEGIN::Favicons --}}
