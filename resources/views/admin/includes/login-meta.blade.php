@@ -12,7 +12,7 @@
 {{-- END::CSRF Token --}}
 
 {{-- BEGIN::Title --}}
-<title>Prokopim</title>
+<title>Login | Prokopim</title>
 {{-- END::Title --}}
 
 {{-- BEGIN::Favicons --}}
@@ -48,8 +48,6 @@
 
 {{-- BEGIN::Plugins CSS --}}
 <link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/css/vendors/sweetalert2.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/css/vendors/scrollbar.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/css/vendors/prism.css') }}">
 {{-- END::Plugins CSS --}}
 
 {{-- BEGIN::Bootstrap CSS --}}

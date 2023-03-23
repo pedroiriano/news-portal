@@ -13,18 +13,18 @@
                         </a>
                     </div>
                     <div class="login-main"> 
-                        <form class="theme-form">
+                        <form class="theme-form" method="POST" action="{{ route('login') }}">
                             @csrf
                             <h4>Sign in to account</h4>
                             <p>Enter your email & password to login</p>
                             <div class="form-group">
-                                <label class="col-form-label">Email Address</label>
-                                <input class="form-control" type="email" required="" placeholder="Test@gmail.com">
+                                <label class="col-form-label" for="email" :value="__('Email')">Email Address</label>
+                                <input id="email" class="form-control" type="email" name="email" :value="old('email')" required="" autofocus autocomplete="username" placeholder="Your Email Here">
                             </div>
                             <div class="form-group">
-                                <label class="col-form-label">Password</label>
+                                <label class="col-form-label" for="password" :value="__('Password')">Password</label>
                                 <div class="form-input position-relative">
-                                    <input class="form-control" type="password" name="login[password]" required="" placeholder="*********">
+                                    <input class="form-control" type="password" name="password" required="" autocomplete="current-password">
                                     <div class="show-hide">
                                         <span class="show"></span>
                                     </div>
@@ -43,9 +43,7 @@
                             <h6 class="text-muted mt-4 or">Or Sign in with</h6>
                             <div class="social mt-4">
                                 <div class="btn-showcase">
-                                    <a class="btn btn-light" href="https://www.linkedin.com/login" target="_blank"><i class="txt-linkedin" data-feather="linkedin"></i>LinkedIn</a>
-                                    <a class="btn btn-light" href="https://twitter.com/login?lang=en" target="_blank"><i class="txt-twitter" data-feather="twitter"></i>Twitter</a>
-                                    <a class="btn btn-light" href="https://www.facebook.com/" target="_blank"><i class="txt-fb" data-feather="facebook"></i>Facebook</a>
+                                    <a class="btn btn-light" href="https://www.linkedin.com/login" target="_blank"><i class="txt-linkedin" data-feather="linkedin"></i> LinkedIn </a><a class="btn btn-light" href="https://twitter.com/login?lang=en" target="_blank"><i class="txt-twitter" data-feather="twitter"></i>twitter</a><a class="btn btn-light" href="https://www.facebook.com/" target="_blank"><i class="txt-fb" data-feather="facebook"></i>facebook</a>
                                 </div>
                             </div>
                             <p class="mt-4 mb-0 text-center">
