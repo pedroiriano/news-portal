@@ -3,95 +3,7 @@
 @section('content')
 <div class="page-body-wrapper horizontal-menu">
     {{-- BEGIN::Page Sidebar --}}
-    <div class="sidebar-wrapper">
-        <div>
-            <div class="logo-wrapper">
-                <a href="index.html">
-                    <img class="img-fluid for-light" src="{{ asset('backend/assets/images/logo/prokopim-dark.png') }}" alt="">
-                    <img class="img-fluid for-dark" src="{{ asset('backend/assets/images/logo/prokopim-light.png') }}" alt="">
-                </a>
-                <div class="back-btn">
-                    <i class="fa fa-angle-left"></i>
-                </div>
-                <div class="toggle-sidebar">
-                    <i class="status_toggle middle sidebar-toggle" data-feather="grid"></i>
-                </div>
-            </div>
-            <div class="logo-icon-wrapper">
-                <a href="index.html">
-                    <img class="img-fluid" src="{{ asset('backend/assets/images/logo/logo-icon.png') }}" alt="">
-                </a>
-            </div>
-            <nav class="sidebar-main">
-                <div class="left-arrow" id="left-arrow">
-                    <i data-feather="arrow-left"></i>
-                </div>
-                <div id="sidebar-menu">
-                    <ul class="sidebar-links" id="simple-bar">
-                        <li class="back-btn">
-                            <div class="mobile-back text-end">
-                                <span>Back</span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i>
-                            </div>
-                        </li>
-                        <li class="sidebar-list">
-                            <a class="sidebar-link sidebar-title" href="../theme/index.html" target="_blank">
-                                <i data-feather="home"></i><span>Dashboard</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-list">
-                            <a class="sidebar-link sidebar-title" href="#">
-                                <i data-feather="anchor"></i><span>Starter kit</span>
-                            </a>
-                            <ul class="sidebar-submenu">
-                                <li>
-                                    <a class="submenu-title" href="#">
-                                        color version<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span>
-                                    </a>
-                                    <ul class="nav-sub-childmenu submenu-content">
-                                        <li><a href="index.html">Layout Light</a></li>
-                                        <li><a href="layout-dark.html">Layout Dark</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a class="submenu-title" href="#">
-                                        Page layout<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span>
-                                    </a>
-                                    <ul class="nav-sub-childmenu submenu-content">
-                                        <li><a href="boxed.html">Boxed</a></li>
-                                        <li><a href="layout-rtl.html">RTL</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="hide-on-scroll.html"><span>Hide menu on Scroll</span></a>
-                                </li>
-                                <li>
-                                    <a class="submenu-title" href="#">
-                                        Footers<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span>
-                                    </a>
-                                    <ul class="nav-sub-childmenu submenu-content">
-                                        <li><a href="footer-light.html">Footer Light</a></li>
-                                        <li><a href="footer-dark.html">Footer Dark</a></li>
-                                        <li><a href="footer-fixed.html">Footer Fixed</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="sidebar-list">
-                            <a class="sidebar-link sidebar-title" href="http://support.pixelstrap.com/help-center" target="_blank">
-                                <i data-feather="headphones"></i><span>Raise Support</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-list">
-                            <a class="sidebar-link sidebar-title" href="https://docs.pixelstrap.com/cuba/all_in_one/document/index.html" target="_blank">
-                                <i data-feather="file-text"></i><span>Documentation</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
-            </nav>
-        </div>
-    </div>
+    @include('admin.includes.sidebar')
     {{-- END::Page Sidebar --}}
 
     {{-- BEGIN::Page Body --}}
@@ -121,74 +33,96 @@
 
         {{-- BEGIN::Page Body Container --}}
         <div class="container-fluid">
-            <div class="row starter-main">
-                <div class="col-sm-12">
+            <div class="row second-chart-list third-news-update">
+                <div class="col-xl-9 xl-100 chart_data_left box-col-12">
                     <div class="card">
-                        <div class="card-header">
-                            <h5>Kick start your project development !</h5>
-                            <div class="card-header-right">
-                                <ul class="list-unstyled card-option">
-                                    <li><i class="fa fa-spin fa-cog"></i></li>
-                                    <li><i class="view-html fa fa-code"></i></li>
-                                    <li><i class="icofont icofont-maximize full-card"></i></li>
-                                    <li><i class="icofont icofont-minus minimize-card"></i></li>
-                                    <li><i class="icofont icofont-refresh reload-card"></i></li>
-                                    <li><i class="icofont icofont-error close-card"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <p>Getting start with your project custom requirements using a ready template which is quite difficult and time taking process, Cuba Admin provides useful features to kick start your project development with no efforts !</p>
-                            <ul>
-                                <li>
-                                    <p>Cuba Admin provides you getting start pages with different layouts, use the layout as per your custom requirements and just change the branding, menu & content.</p>
-                                </li>
-                                <li>
-                                    <p>Every components in Cuba Admin are decoupled, it means use only components you actually need! Remove unnecessary and extra code easily just by excluding the path to specific SCSS, JS file.</p>
-                                </li>
-                                <li>
-                                    <p>It use PUG as template engine to generate pages and whole template quickly using node js. Save your time for doing the common changes for each page (i.e menu, branding and footer) by generating template with pug.</p>
-                                </li>
-                            </ul>
-                            <div class="code-box-copy">
-                                <button class="code-box-copy__btn btn-clipboard" data-clipboard-target="#example-head" title="Copy">
-                                    <i class="icofont icofont-copy-alt"></i>
-                                </button>
-                                <pre><code class="language-html" id="example-head">&lt;!-- Cod Box Copy begin --&gt;
-                                &lt;p&gt;Getting start with your project custom requirements using a ready template which is quite difficult and time taking process, Cuba Admin provides useful features to kick start your project development with no efforts !&lt;/p&gt;
-                                &lt;ul&gt;
-                                &lt;li&gt;&lt;p&gt;Cuba Admin provides you getting start pages with different layouts, use the layout as per your custom requirements and just change the branding, menu & content.&lt;/p&gt;&lt;/li&gt;
-                                &lt;li&gt;&lt;p&gt;Every components in Cuba Admin are decoupled, it means use only components you actually need! Remove unnecessary and extra code easily just by excluding the path to specific SCSS, JS file.&lt;/p&gt;&lt;/li&gt;
-                                &lt;li&gt;&lt;p&gt;It use PUG as template engine to generate pages and whole template quickly using node js. Save your time for doing the common changes for each page (i.e menu, branding and footer) by generating template with pug.&lt;/p&gt;&lt;/li&gt;
-                                &lt;/ul&gt;
-                                &lt;!-- Cod Box Copy end --&gt;</code></pre>
+                        <div class="card-body p-0">
+                            <div class="row m-0 chart-main">
+                                <div class="col-xl-3 col-md-6 col-sm-6 p-0 box-col-6">
+                                    <div class="media align-items-center">
+                                        <div class="hospital-small-chart">
+                                            <div class="small-bar">
+                                                <div class="small-chart flot-chart-container"></div>
+                                            </div>
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="right-chart-content">
+                                                <h4>1001</h4><span>Purchase </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6 col-sm-6 p-0 box-col-6">
+                                    <div class="media align-items-center">
+                                        <div class="hospital-small-chart">
+                                            <div class="small-bar">
+                                                <div class="small-chart1 flot-chart-container"></div>
+                                            </div>
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="right-chart-content">
+                                                <h4>1005</h4><span>Sales</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6 col-sm-6 p-0 box-col-6">
+                                    <div class="media align-items-center">
+                                        <div class="hospital-small-chart">
+                                            <div class="small-bar">
+                                                <div class="small-chart2 flot-chart-container"></div>
+                                            </div>
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="right-chart-content">
+                                                <h4>100</h4><span>Sales return</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-md-6 col-sm-6 p-0 box-col-6">
+                                    <div class="media border-none align-items-center">
+                                        <div class="hospital-small-chart">
+                                            <div class="small-bar">
+                                                <div class="small-chart3 flot-chart-container"></div>
+                                            </div>
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="right-chart-content">
+                                                <h4>101</h4><span>Purchase ret</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-xl-3 xl-50 chart_data_right box-col-12">
                     <div class="card">
-                        <div class="card-header">
-                            <h5>With Header</h5>
-                        </div>
                         <div class="card-body">
-                            <h5>Content title</h5>
-                            <p>Add a heading to card with <code>.card-header</code> class</p>
-                            <p>You may also include any &lt;h1&gt;-&lt;h6&gt; with a <code>.card-header </code> & <code>.card-title</code> class to add heading.</p>
-                            <p>Jelly beans sugar plum cheesecake cookie oat cake soufflé. Tart lollipop carrot cake sugar plum. Marshmallow wafer tiramisu jelly beans.</p>
+                            <div class="media align-items-center">
+                                <div class="media-body right-chart-content">
+                                    <h4>$95,900<span class="new-box">Hot</span></h4><span>Purchase Order Value</span>
+                                </div>
+                                <div class="knob-block text-center">
+                                    <input class="knob1" data-width="10" data-height="70" data-thickness=".3" data-angleoffset="0" data-linecap="round" data-fgcolor="#7366ff" data-bgcolor="#eef5fb" value="60">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-xl-3 xl-50 chart_data_right second d-none"> 
                     <div class="card">
-                        <div class="card-header card-no-border">
-                            <h5>With Header & No Border</h5>
-                        </div>
                         <div class="card-body">
-                            <h5>Content title</h5>
-                            <p>Add a heading to card with <code>.card-header </code> class & without header border<code>.border-bottom-0</code> class.</p>
-                            <p>You may also include any &lt;h1&gt;-&lt;h6&gt; with a <code>.card-header </code> & <code>.card-title</code> class to add heading.</p>
-                            <p>Gingerbread brownie sweet roll cheesecake chocolate cake jelly beans marzipan gummies dessert. Jelly beans sugar plum cheesecake cookie oat cake soufflé.</p>
+                            <div class="media align-items-center">
+                                <div class="media-body right-chart-content"> 
+                                    <h4>$95,000<span class="new-box">New</span></h4><span>Product Order Value</span>
+                                </div>
+                                <div class="knob-block text-center">
+                                    <input class="knob1" data-width="50" data-height="70" data-thickness=".3" data-fgcolor="#7366ff" data-linecap="round" data-angleoffset="0" value="60">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
