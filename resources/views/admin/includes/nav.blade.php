@@ -94,7 +94,7 @@
                     <div class="media profile-media">
                         <img class="b-r-10" src="{{ asset('backend/assets/images/dashboard/profile.jpg') }}" alt="">
                         <div class="media-body">
-                            <span>{{ auth()->user()->name }} - Prokopim</span>
+                            <span>{{ auth()->user()->name }}</span>
                             <p class="mb-0 font-roboto">{{ auth()->user()->role }} <i class="middle fa fa-angle-down"></i></p>
                         </div>
                     </div>
