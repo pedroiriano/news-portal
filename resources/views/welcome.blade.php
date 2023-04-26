@@ -6,6 +6,11 @@
 
         <title>{{ $pageTitle }}</title>
 
+        {{-- BEGIN::Favicons --}}
+        <link rel="icon" href="{{ asset('backend/assets/images/favicon.png') }}" type="image/x-icon">
+        <link rel="shortcut icon" href="{{ asset('backend/assets/images/favicon.png') }}" type="image/x-icon">
+        {{-- END::Favicons --}}
+
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
