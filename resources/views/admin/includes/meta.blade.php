@@ -50,6 +50,9 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/css/vendors/sweetalert2.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/css/vendors/scrollbar.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/css/vendors/prism.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/css/vendors/animate.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/css/vendors/chartist.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/css/vendors/date-picker.css') }}">
 {{-- END::Plugins CSS --}}
 
 {{-- BEGIN::Bootstrap CSS --}}
