@@ -13,7 +13,7 @@
         </form>
         {{-- BEGIN::Logo --}}
         <div class="header-logo-wrapper col-auto p-0">
-            <div class="logo-wrapper"><a href="index.html"><img class="img-fluid" src="{{ asset('backend/assets/images/logo/logo.png') }}" alt=""></a></div>
+            <div class="logo-wrapper"><a href="{{ route('admin.dashboard') }}"><img class="img-fluid" src="{{ asset('backend/assets/images/logo/logo.png') }}" alt=""></a></div>
             <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="align-center"></i></div>
         </div>
         {{-- END::Logo --}}
@@ -99,7 +99,7 @@
                         </div>
                     </div>
                     <ul class="profile-dropdown onhover-show-div">
-                        <li><a href="#"><i data-feather="user"></i><span>Account </span></a></li>
+                        <li><a href="{{ route('admin.profile') }}"><i data-feather="user"></i><span>Account </span></a></li>
                         <li><a href="#"><i data-feather="mail"></i><span>Inbox</span></a></li>
                         <li><a href="#"><i data-feather="file-text"></i><span>Taskboard</span></a></li>
                         <li><a href="#"><i data-feather="settings"></i><span>Settings</span></a></li>
