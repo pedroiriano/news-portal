@@ -1,7 +1,7 @@
 <div class="sidebar-wrapper">
     <div>
         <div class="logo-wrapper">
-            <a href="index.html">
+            <a href="{{ route('admin.dashboard') }}">
                 <img class="img-fluid for-light" src="{{ asset('backend/assets/images/logo/prokopim-dark.png') }}" alt="">
                 <img class="img-fluid for-dark" src="{{ asset('backend/assets/images/logo/prokopim-light.png') }}" alt="">
             </a>
@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="logo-icon-wrapper">
-            <a href="index.html">
+            <a href="{{ route('admin.dashboard') }}">
                 <img class="img-fluid" src="{{ asset('backend/assets/images/logo/logo-icon.png') }}" alt="">
             </a>
         </div>
