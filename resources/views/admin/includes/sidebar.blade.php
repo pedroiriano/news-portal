@@ -29,55 +29,62 @@
                         </div>
                     </li>
                     <li class="sidebar-list">
-                        <a class="sidebar-link sidebar-title" href="../theme/index.html" target="_blank">
+                        <a class="sidebar-link sidebar-title" href="javascript:void(0);">
                             <i data-feather="home"></i><span>Dashboard</span>
                         </a>
+                        <ul class="sidebar-submenu">
+                            <li>
+                                <a href="{{ route('admin.dashboard') }}">
+                                    <span>Overview</span>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="sidebar-list">
-                        <a class="sidebar-link sidebar-title" href="#">
+                        <a class="sidebar-link sidebar-title" href="javascript:void(0);">
                             <i data-feather="anchor"></i><span>Starter kit</span>
                         </a>
                         <ul class="sidebar-submenu">
                             <li>
-                                <a class="submenu-title" href="#">
+                                <a class="submenu-title" href="javascript:void(0);">
                                     color version<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span>
                                 </a>
                                 <ul class="nav-sub-childmenu submenu-content">
-                                    <li><a href="index.html">Layout Light</a></li>
-                                    <li><a href="layout-dark.html">Layout Dark</a></li>
+                                    <li><a href="javascript:void(0);">Layout Light</a></li>
+                                    <li><a href="javascript:void(0);">Layout Dark</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a class="submenu-title" href="#">
+                                <a class="submenu-title" href="javascript:void(0);">
                                     Page layout<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span>
                                 </a>
                                 <ul class="nav-sub-childmenu submenu-content">
-                                    <li><a href="boxed.html">Boxed</a></li>
-                                    <li><a href="layout-rtl.html">RTL</a></li>
+                                    <li><a href="javascript:void(0);">Boxed</a></li>
+                                    <li><a href="javascript:void(0);">RTL</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="hide-on-scroll.html"><span>Hide menu on Scroll</span></a>
+                                <a href="javascript:void(0);"><span>Hide menu on Scroll</span></a>
                             </li>
                             <li>
-                                <a class="submenu-title" href="#">
+                                <a class="submenu-title" href="javascript:void(0);">
                                     Footers<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span>
                                 </a>
                                 <ul class="nav-sub-childmenu submenu-content">
-                                    <li><a href="footer-light.html">Footer Light</a></li>
-                                    <li><a href="footer-dark.html">Footer Dark</a></li>
-                                    <li><a href="footer-fixed.html">Footer Fixed</a></li>
+                                    <li><a href="javascript:void(0);">Footer Light</a></li>
+                                    <li><a href="javascript:void(0);">Footer Dark</a></li>
+                                    <li><a href="javascript:void(0);">Footer Fixed</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
                     <li class="sidebar-list">
-                        <a class="sidebar-link sidebar-title" href="http://support.pixelstrap.com/help-center" target="_blank">
+                        <a class="sidebar-link sidebar-title" href="javascript:void(0);">
                             <i data-feather="headphones"></i><span>Raise Support</span>
                         </a>
                     </li>
                     <li class="sidebar-list">
-                        <a class="sidebar-link sidebar-title" href="https://docs.pixelstrap.com/cuba/all_in_one/document/index.html" target="_blank">
+                        <a class="sidebar-link sidebar-title" href="javascript:void(0);">
                             <i data-feather="file-text"></i><span>Documentation</span>
                         </a>
                     </li>
