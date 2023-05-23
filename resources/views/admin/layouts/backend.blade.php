@@ -18,7 +18,11 @@
     <div class="tap-top"><i data-feather="chevrons-up"></i></div>
     <div class="page-wrapper compact-wrapper" id="pageWrapper">
         @include('admin.includes.nav')
-        @yield('content')
+        <div class="page-body-wrapper horizontal-menu">
+            @include('admin.includes.sidebar')
+            @yield('content')
+            @include('admin.includes.footer')
+        </div>
         @include('admin.includes.js')
         @stack('js')
     </div>
