@@ -30,8 +30,9 @@ class AdminController extends Controller
 
     public function AdminProfile()
     {
+        $pageTitle = "Profile | Prokopim";
         $id = Auth::user()->id;
         $adminData = User::find($id);
-        return view('admin.admin-profile-view', compact('adminData'));
+        return view('admin.admin-profile-view', compact('pageTitle', 'adminData'));
     }
 }
