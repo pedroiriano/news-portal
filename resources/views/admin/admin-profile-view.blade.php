@@ -49,7 +49,7 @@
                             <div class="row mb-2">
                                 <div class="profile-title">
                                     <div class="media">
-                                        <img class="img-70 rounded-circle" alt="" src="{{ ($adminData->photo == NULL) ? asset('backend/assets/images/user/7.jpg') : $adminData->photo }}">
+                                        <img class="img-70 rounded-circle" alt="" src="{{ (empty($adminData->photo)) ? asset('backend/assets/images/user/7.jpg') : asset('backend/assets/images/user/admin/'.$adminData->photo) }}">
                                         <div class="media-body">
                                             <h5 class="mb-1">{{ $adminData->name }}</h5>
                                             <p>{{ $adminData->role }}</p>
@@ -58,16 +58,16 @@
                                 </div>
                             </div>
                             <div class="ttl-info text-start mb-3">
-                                <h6><i class="fa fa-id-card"></i> Name</h6><span>{{ ($adminData->name == NULL) ? '-' : $adminData->name }}</span>
+                                <h6><i class="fa fa-id-card"></i> Name</h6><span>{{ (empty($adminData->name)) ? 'n/a' : $adminData->name }}</span>
                             </div>
                             <div class="ttl-info text-start mb-3">
-                                <h6><i class="fa fa-cogs"></i> Username</h6><span>{{ ($adminData->username == NULL) ? '-' : $adminData->username }}</span>
+                                <h6><i class="fa fa-cogs"></i> Username</h6><span>{{ (empty($adminData->username)) ? 'n/a' : $adminData->username }}</span>
                             </div>
                             <div class="ttl-info text-start mb-3">
-                                <h6><i class="fa fa-envelope"></i> Email</h6><span>{{ ($adminData->email == NULL) ? '-' : $adminData->email }}</span>
+                                <h6><i class="fa fa-envelope"></i> Email</h6><span>{{ (empty($adminData->email)) ? 'n/a' : $adminData->email }}</span>
                             </div>
                             <div class="ttl-info text-start mb-3">
-                                <h6><i class="fa fa-phone"></i> Phone</h6><span>{{ ($adminData->phone == NULL) ? '-' : $adminData->phone }}</span>
+                                <h6><i class="fa fa-phone"></i> Phone</h6><span>{{ (empty($adminData->phone)) ? 'n/a' : $adminData->phone }}</span>
                             </div>
                         </div>
                     </div>
@@ -92,31 +92,31 @@
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label class="form-label" for="userName" autofocus>Username</label>
-                                        <input class="form-control" id="userName" type="text" placeholder="Username">
+                                        <input class="form-control" id="userName" type="text" name="username" placeholder="Username">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label class="form-label" for="emailAddress">Email address</label>
-                                        <input class="form-control" id="emailAddress" type="email" placeholder="Email">
+                                        <input class="form-control" id="emailAddress" type="email" name="email" placeholder="Email">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label class="form-label" for="fullName">Full Name</label>
-                                        <input class="form-control" id="fullName" type="text" placeholder="Full Name">
+                                        <input class="form-control" id="fullName" type="text" name="name" placeholder="Full Name">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label class="form-label" for="phoneNumber">Phone Number</label>
-                                        <input class="form-control" id="phoneNumber" type="number" placeholder="Phone Number">
+                                        <input class="form-control" id="phoneNumber" type="number" name="phone" placeholder="Phone Number">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="mb-3">
                                         <label class="form-label" for="userRole">Role</label>
-                                        <select class="form-control btn-square" id="userRole">
+                                        <select class="form-control btn-square" id="userRole" name="role">
                                             <option value="0">--Select--</option>
                                             <option value="1">Admin</option>
                                             <option value="2">User</option>
@@ -137,13 +137,13 @@
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label class="form-label" for="newPassword">New Password</label>
-                                        <input class="form-control" id="newPassword" type="password" placeholder="New Password">
+                                        <input class="form-control" id="newPassword" type="password" name="newpassword" placeholder="New Password">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label class="form-label" for="confirmPassword">Confirm Password</label>
-                                        <input class="form-control" id="confirmPassword" type="password" placeholder="Confirm Password">
+                                        <input class="form-control" id="confirmPassword" type="password" name="confirmpassword" placeholder="Confirm Password">
                                     </div>
                                 </div>
                             </div>
@@ -157,7 +157,9 @@
         </div>
     </div>
     {{-- END::Page Body Container --}}
-    
+    <form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
+        <input type="file" name="file" />
+    </form>
     <!-- Container-fluid starts-->
     {{-- <div class="container-fluid">
         <div class="row">
