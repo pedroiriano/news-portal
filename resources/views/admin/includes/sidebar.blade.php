@@ -29,12 +29,12 @@
                         </div>
                     </li>
                     <li class="sidebar-list">
-                        <a class="sidebar-link sidebar-title" href="javascript:void(0);">
+                        <a class="sidebar-link sidebar-title">
                             <i data-feather="home"></i><span>Dashboard</span>
                         </a>
                         <ul class="sidebar-submenu">
                             <li>
-                                <a href="{{ route('admin.dashboard') }}">
+                                <a href="{{ route('admin.dashboard') }}" class="{{ (Route::currentRouteName() == 'Admin.Dashboard') ? 'active' : '' }}" aria-current="{{ (Route::currentRouteName() == 'Admin.Dashboard') ? 'true' : 'false' }}">
                                     <span>Overview</span>
                                 </a>
                             </li>
