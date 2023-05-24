@@ -129,7 +129,7 @@
                                         <div class="dropzone" id="singleFileUpload" action="/file-upload">
                                             <div class="dz-message needsclick">
                                                 <i class="icon-cloud-up"></i>
-                                                <h6>Drop files here or click to upload.</h6><span class="note needsclick">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span>
+                                                <h6>Drop files here or click to upload.</h6>
                                             </div>
                                         </div>
                                     </div>
