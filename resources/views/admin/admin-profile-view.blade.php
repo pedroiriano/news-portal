@@ -73,7 +73,8 @@
                     </div>
                 </div>
                 <div class="col-xl-8">
-                    <form class="card">
+                    <form class="card" id="adminProfileForm" method="POST" action="{{ empty($adminData) ? route('admin.profile') : route('admin.profile', $adminData->id) }}" enctype="multipart/form-data">
+                        @csrf
                         <div class="card-header">
                             <h4 class="card-title mb-0">Edit Profile</h4>
                             <div class="card-header-right">
@@ -127,6 +128,7 @@
                                     <div class="mb-3">
                                         <label class="form-label" for="singleFileUpload">Upload Photo</label>
                                         <div class="dropzone" id="singleFileUpload" action="/file-upload">
+                                            <input type="hidden" name="images" value="images" id="images">
                                             <div class="dz-message needsclick">
                                                 <i class="icon-cloud-up"></i>
                                                 <h6>Drop files here or click to upload.</h6>
@@ -149,7 +151,7 @@
                             </div>
                         </div>
                         <div class="card-footer text-end">
-                            <button class="btn btn-primary" type="submit">Update Profile</button>
+                            <button class="btn btn-primary" type="submit" id="adminProfileSubmit">Update Profile</button>
                         </div>
                     </form>
                 </div>
@@ -157,57 +159,82 @@
         </div>
     </div>
     {{-- END::Page Body Container --}}
-    <form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
-        <input type="file" name="file" />
-    </form>
-    <!-- Container-fluid starts-->
-    {{-- <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-header">
-                        <h5>Single File Upload</h5>
-                    </div>
-                    <div class="card-body">
-                        <form class="dropzone" id="singleFileUpload" action="/upload.php">
-                            <div class="dz-message needsclick"><i class="icon-cloud-up"></i>
-                            <h6>Drop files here or click to upload.</h6><span class="note needsclick">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-header">
-                        <h5>Multi File Upload</h5>
-                    </div>
-                    <div class="card-body">
-                        <form class="dropzone dropzone-primary" id="multiFileUpload" action="/upload.php">
-                            <div class="dz-message needsclick"><i class="icon-cloud-up"></i>
-                            <h6>Drop files here or click to upload.</h6><span class="note needsclick">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-header">
-                        <h5>File Type Validation</h5>
-                    </div>
-                    <div class="card-body">
-                        <form class="dropzone dropzone-info" id="fileTypeValidation" action="/upload.php">
-                            <div class="dz-message needsclick"><i class="icon-cloud-up"></i>
-                            <h6>Drop files here or click to upload.</h6><span class="note needsclick">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-    <!-- Container-fluid Ends-->
 </div>
 {{-- END::Page Body --}}
+
+<script>
+    $.fn.serializeObject = function()
+        {
+            var o = {};
+            var a = this.serializeArray();
+            $.each(a, function() {
+                if (o[this.name]) {
+                    if (!o[this.name].push) {
+                        o[this.name] = [o[this.name]];
+                    }
+                    o[this.name].push(this.value || '');
+                } else {
+                    o[this.name] = this.value || '';
+                }
+            });
+            return o;
+        };
+</script>
+<script>
+    var $form = $('#adminProfileForm');
+    $method = $form.attr('method');
+    $url = $form.attr('action');
+    
+    // Disable AutoDiscover
+    Dropzone.autoDiscover = false;
+    
+    // Set Dropzone Options
+    Dropzone.options.myAwesomeDropzone = {
+        autoProcessQueue: false,
+        uploadMultiple: false,
+        parallelUploads: 1,
+        maxFiles: 1,
+        addRemoveLinks: true,
+        acceptedFiles: ".jpg, .jpeg, .png",
+        maxFilesize: 5, // 5MB
+        dictDefaultMessage: "Drop files here or click to upload.",
+    };
+    
+    // Initialize Dropzone
+    var myDropzone = new Dropzone("#singleFileUpload", {url: $url, method: $method});
+
+    // Initialize Submit Button
+    var submitButton = document.querySelector("#adminProfileSubmit");
+
+    // Submit Button Event on click
+    submitButton.addEventListener("click", function(e) {
+        e.preventDefault();
+        myDropzone.processQueue();
+    });
+    
+    // on sending via dropzone append token and form values (using serializeObject jquery Plugin)
+    myDropzone.on("sendingsingle", function(file, xhr, formData) {
+        var formValues = $('#adminProfileForm').serializeObject();
+        $.each(formValues, function(key, value){
+            formData.append(key, value);
+        });
+    });
+
+    // on success redirect
+    myDropzone.on("successsingle", function() {
+        // redirect to products page after success.
+        window.location="{{ URL::to('/admin/profile') }}";
+    });
+
+    // on error show errors
+    myDropzone.on("errorsingle", function(file, errorMessage, xhr) {
+        var arr = [];
+        $.each(errorMessage, function(key, value) {
+            console.log(value);
+            arr += value + "\n";
+        });
+        // show error message
+        console.log(arr);
+    });
+</script>
 @endsection
