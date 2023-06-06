@@ -92,7 +92,7 @@
                 </li>
                 <li class="profile-nav onhover-dropdown p-0 me-0">
                     <div class="media profile-media">
-                        <img class="b-r-10" src="{{ asset('backend/assets/images/dashboard/profile.jpg') }}" alt="">
+                        <img class="b-r-10 rounded-circle" src="{{ (empty(auth()->user()->photo)) ? asset('backend/assets/images/user/7.jpg') : asset('storage/adminphoto/'.auth()->user()->photo) }}" alt="Profile Photo" style="width: 37px;">
                         <div class="media-body">
                             <span>{{ auth()->user()->name }}</span>
                             <p class="mb-0 font-roboto">{{ auth()->user()->role }} <i class="middle fa fa-angle-down"></i></p>
