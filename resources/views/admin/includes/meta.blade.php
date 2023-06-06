@@ -68,3 +68,8 @@
 {{-- BEGIN::Responsive CSS --}}
 <link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/css/responsive.css') }}">
 {{-- END::Responsive CSS --}}
+
+{{-- BEGIN::Latest Jquery --}}
+<script src="{{ asset('backend/assets/js/jquery-3.7.0.min.js') }}"></script>
+{{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> --}}
+{{-- END::Latest Jquery --}}
