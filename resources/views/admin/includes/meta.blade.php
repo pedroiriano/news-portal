@@ -53,7 +53,7 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/css/vendors/animate.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/css/vendors/chartist.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/css/vendors/date-picker.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/css/vendors/dropzone.css') }}">
+{{-- <link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/css/vendors/dropzone.css') }}"> --}}
 {{-- END::Plugins CSS --}}
 
 {{-- BEGIN::Bootstrap CSS --}}

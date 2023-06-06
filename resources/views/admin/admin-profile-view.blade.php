@@ -124,7 +124,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-12">
+                                {{-- <div class="col-md-12">
                                     <div class="mb-3">
                                         <label class="form-label" for="singleFileUpload">Upload Photo</label>
                                         <div class="dropzone" id="singleFileUpload" action="/file-upload">
@@ -135,7 +135,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label class="form-label" for="newPassword">New Password</label>
@@ -161,80 +161,4 @@
     {{-- END::Page Body Container --}}
 </div>
 {{-- END::Page Body --}}
-
-<script>
-    $.fn.serializeObject = function()
-        {
-            var o = {};
-            var a = this.serializeArray();
-            $.each(a, function() {
-                if (o[this.name]) {
-                    if (!o[this.name].push) {
-                        o[this.name] = [o[this.name]];
-                    }
-                    o[this.name].push(this.value || '');
-                } else {
-                    o[this.name] = this.value || '';
-                }
-            });
-            return o;
-        };
-</script>
-<script>
-    var $form = $('#adminProfileForm');
-    $method = $form.attr('method');
-    $url = $form.attr('action');
-    
-    // Disable AutoDiscover
-    Dropzone.autoDiscover = false;
-    
-    // Set Dropzone Options
-    Dropzone.options.myAwesomeDropzone = {
-        autoProcessQueue: false,
-        uploadMultiple: false,
-        parallelUploads: 1,
-        maxFiles: 1,
-        addRemoveLinks: true,
-        acceptedFiles: ".jpg, .jpeg, .png",
-        maxFilesize: 5, // 5MB
-        dictDefaultMessage: "Drop files here or click to upload.",
-    };
-    
-    // Initialize Dropzone
-    var myDropzone = new Dropzone("#singleFileUpload", {url: $url, method: $method});
-
-    // Initialize Submit Button
-    var submitButton = document.querySelector("#adminProfileSubmit");
-
-    // Submit Button Event on click
-    submitButton.addEventListener("click", function(e) {
-        e.preventDefault();
-        myDropzone.processQueue();
-    });
-    
-    // on sending via dropzone append token and form values (using serializeObject jquery Plugin)
-    myDropzone.on("sendingsingle", function(file, xhr, formData) {
-        var formValues = $('#adminProfileForm').serializeObject();
-        $.each(formValues, function(key, value){
-            formData.append(key, value);
-        });
-    });
-
-    // on success redirect
-    myDropzone.on("successsingle", function() {
-        // redirect to products page after success.
-        window.location="{{ URL::to('/admin/profile') }}";
-    });
-
-    // on error show errors
-    myDropzone.on("errorsingle", function(file, errorMessage, xhr) {
-        var arr = [];
-        $.each(errorMessage, function(key, value) {
-            console.log(value);
-            arr += value + "\n";
-        });
-        // show error message
-        console.log(arr);
-    });
-</script>
 @endsection

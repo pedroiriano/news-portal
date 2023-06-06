@@ -43,8 +43,8 @@
 <script src="{{ asset('backend/assets/js/datepicker/date-picker/datepicker.js') }}"></script>
 <script src="{{ asset('backend/assets/js/datepicker/date-picker/datepicker.en.js') }}"></script>
 <script src="{{ asset('backend/assets/js/datepicker/date-picker/datepicker.custom.js') }}"></script>
-<script src="{{ asset('backend/assets/js/dropzone/dropzone.js') }}"></script>
-<script src="{{ asset('backend/assets/js/dropzone/dropzone-script.js') }}"></script>
+{{-- <script src="{{ asset('backend/assets/js/dropzone/dropzone.js') }}"></script>
+<script src="{{ asset('backend/assets/js/dropzone/dropzone-script.js') }}"></script> --}}
 <script src="{{ asset('backend/assets/js/tooltip-init.js') }}"></script>
 {{-- END::Plugins JS --}}
 
