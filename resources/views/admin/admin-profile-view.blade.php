@@ -115,16 +115,6 @@
                                         <input class="form-control" id="phoneNumber" type="number" name="phone" placeholder="Phone Number" value="{{ $adminData->phone }}">
                                     </div>
                                 </div>
-                                <div class="col-md-12">
-                                    <div class="mb-3">
-                                        <label class="form-label" for="userRole">Role</label>
-                                        <select class="form-control btn-square" id="userRole" name="role">
-                                            <option value="0">--Select--</option>
-                                            <option value="1">Admin</option>
-                                            <option value="2">User</option>
-                                        </select>
-                                    </div>
-                                </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label class="form-label" for="imageUpload">Upload Photo</label>
@@ -134,18 +124,6 @@
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <img class="img-70 rounded-circle" id="imageShow" alt="Profile Photo" src="{{ (empty($adminData->photo)) ? asset('backend/assets/images/user/7.jpg') : asset('storage/adminphoto/'.$adminData->photo) }}">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label class="form-label" for="newPassword">New Password</label>
-                                        <input class="form-control" id="newPassword" type="password" name="newpassword" placeholder="New Password">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label class="form-label" for="confirmPassword">Confirm Password</label>
-                                        <input class="form-control" id="confirmPassword" type="password" name="confirmpassword" placeholder="Confirm Password">
                                     </div>
                                 </div>
                             </div>
