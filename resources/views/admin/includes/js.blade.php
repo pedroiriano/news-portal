@@ -1,7 +1,3 @@
-{{-- BEGIN::Latest Jquery --}}
-<script src="{{ asset('backend/assets/js/jquery-3.5.1.min.js') }}"></script>
-{{-- END::Latest Jquery --}}
-
 {{-- BEGIN::Bootstrap JS --}}
 <script src="{{ asset('backend/assets/js/bootstrap/bootstrap.bundle.min.js') }}"></script>
 {{-- END::Bootstrap JS --}}
